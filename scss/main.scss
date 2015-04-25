@@ -80,7 +80,7 @@ img {
     height: auto;
 }
 a {
-    color: $primary;
+    color: $highlight;
     
     &:hover, &:active {
         color: $secondary;
@@ -157,7 +157,12 @@ a {
 		}
 	}
 	a {
+		color: $secondary;
 		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		};
 	}
 }
 
@@ -196,8 +201,28 @@ section {
 	
 	.date {
 		display: block;
+		margin-bottom: 0.5rem;
+		padding-left: 25px;
 		letter-spacing: 1px;
+		color: $secondary;
+		background: url(../images/date-icon.png) no-repeat left center;
+		background-size: 20px 20px;
 		font-weight: 700;
+	}
+
+	.location {
+		display: block;
+		padding-left: 25px;
+		letter-spacing: 1px;
+		color: $highlight;
+		background: url(../images/location-icon.png) no-repeat 3px center;
+		background-size: 15px 20px;
+		font-weight: 700;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&#intro {
@@ -290,6 +315,8 @@ section {
 } // .row
 
 .event {
+	float: left;
+
 	&:nth-child(2n+1) {
 		clear: both;
 	}
@@ -308,6 +335,7 @@ section {
 		color: $primary;
 		text-decoration: none;
 		border-radius: 3px;
+		cursor: pointer;
 	}
 }
 
@@ -318,6 +346,9 @@ section {
 	display: none;
 }
 
+.activity-list {
+	margin: 0 -1.5rem;
+}
 .activity {
     padding: 0 1.5rem;
     margin-bottom: 2rem;
@@ -338,12 +369,13 @@ section {
 	img {
 		margin: 0;
 		text-align: bottom;
+		border-radius: 3px 3px 0 0;
 	}
 
 	h2 {
 		margin: 0 1rem 0.5rem;
 		padding: .5rem 0 0;
-		font-size: 1em;
+		font-size: 1.25em;
 	}
 	p {
 		margin: 0 1rem;
@@ -371,8 +403,12 @@ section {
 .site-footer-inner {
 	margin: 0 auto;
 	max-width: $maxwidth;
+	color: #ccc;
 }
 
+.right {
+	text-align: right;
+}
 .hidden {
 	display: none;
 }

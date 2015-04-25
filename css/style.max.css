@@ -432,7 +432,7 @@ img {
 }
 
 a {
-  color: #1b5279;
+  color: #ee7908;
 }
 a:hover, a:active {
   color: #1a98a6;
@@ -501,7 +501,11 @@ a:hover, a:active {
   }
 }
 .site-nav a {
+  color: #1a98a6;
   text-decoration: none;
+}
+.site-nav a:hover {
+  text-decoration: underline;
 }
 
 section {
@@ -534,8 +538,26 @@ section h2 small {
 }
 section .date {
   display: block;
+  margin-bottom: 0.5rem;
+  padding-left: 25px;
   letter-spacing: 1px;
+  color: #1a98a6;
+  background: url(../images/date-icon.png) no-repeat left center;
+  background-size: 20px 20px;
   font-weight: 700;
+}
+section .location {
+  display: block;
+  padding-left: 25px;
+  letter-spacing: 1px;
+  color: #ee7908;
+  background: url(../images/location-icon.png) no-repeat 3px center;
+  background-size: 15px 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+section .location:hover {
+  text-decoration: underline;
 }
 section#intro {
   padding: 8rem 1rem;
@@ -632,6 +654,9 @@ section#how-to-get-here {
   display: block;
 }
 
+.event {
+  float: left;
+}
 .event:nth-child(2n+1) {
   clear: both;
 }
@@ -651,6 +676,7 @@ section#how-to-get-here {
   color: #1b5279;
   text-decoration: none;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 #activities:after {
@@ -661,6 +687,10 @@ section#how-to-get-here {
 
 #activities .activity {
   display: none;
+}
+
+.activity-list {
+  margin: 0 -1.5rem;
 }
 
 .activity {
@@ -691,11 +721,12 @@ section#how-to-get-here {
 .activity-inner img {
   margin: 0;
   text-align: bottom;
+  border-radius: 3px 3px 0 0;
 }
 .activity-inner h2 {
   margin: 0 1rem 0.5rem;
   padding: .5rem 0 0;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 .activity-inner p {
   margin: 0 1rem;
@@ -723,6 +754,11 @@ section#how-to-get-here {
 .site-footer-inner {
   margin: 0 auto;
   max-width: 1060px;
+  color: #ccc;
+}
+
+.right {
+  text-align: right;
 }
 
 .hidden {
