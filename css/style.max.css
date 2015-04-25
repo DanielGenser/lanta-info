@@ -667,17 +667,23 @@ section#how-to-get-here {
   padding: 0;
   list-style: none;
   margin-bottom: 2.5rem;
+  font-size: 0.875em;
+  line-height: 1;
   text-align: center;
 }
 .activity-filter li {
   display: inline-block;
   margin: 0 0.25rem 0.5rem;
-  padding: 0.25rem 0.75rem;
-  background-color: #aadae4;
-  color: #1b5279;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #ee7908;
   text-decoration: none;
   border-radius: 3px;
   cursor: pointer;
+}
+.activity-filter li.active {
+  color: white;
+  background-color: #ee7908;
 }
 
 #activities:after {
@@ -755,7 +761,7 @@ section#how-to-get-here {
 .site-footer-inner {
   margin: 0 auto;
   max-width: 1060px;
-  color: #ccc;
+  color: #999;
 }
 
 .right {
