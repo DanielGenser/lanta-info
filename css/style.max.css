@@ -580,6 +580,7 @@ section#events {
   background-color: #f0f5e1;
 }
 section#activities {
+  padding-bottom: 2rem;
   background-color: #1a98a6;
 }
 section#activities h1 {
