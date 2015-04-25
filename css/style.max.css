@@ -420,7 +420,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #16161d;
@@ -505,6 +505,7 @@ a:hover, a:active {
 }
 
 section {
+  position: relative;
   padding: 0 2rem;
 }
 section .section-inner {
@@ -517,7 +518,7 @@ section h1 {
   font-size: 2.4em;
   line-height: 1.2;
   color: #1a98a6;
-  font-weight: 100;
+  font-weight: 300;
   text-align: center;
 }
 section h2 {
@@ -529,7 +530,7 @@ section h2 {
 section h2 small {
   display: block;
   font-size: 0.75em;
-  font-weight: 100;
+  font-weight: 300;
 }
 section .date {
   display: block;
@@ -561,6 +562,9 @@ section#activities {
 }
 section#activities h1 {
   color: white;
+}
+section#how-to-get-here {
+  padding: 0;
 }
 
 /*
@@ -631,10 +635,25 @@ section#activities h1 {
 .activity h2 {
   margin: 0 1rem;
   padding: .5rem 0 0;
+  font-size: 0.5em;
 }
 .activity p {
   margin: 0 1rem;
   padding: 0 0 1rem 0;
+}
+
+.map-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.lanta-map {
+  width: 100%;
+  height: 60vh;
+  border: none;
 }
 
 .site-footer {
