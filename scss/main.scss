@@ -196,8 +196,28 @@ section {
 	
 	.date {
 		display: block;
+		margin-bottom: 0.5rem;
+		padding-left: 25px;
 		letter-spacing: 1px;
+		color: $secondary;
+		background: url(../images/date-icon.png) no-repeat left center;
+		background-size: 20px 20px;
 		font-weight: 700;
+	}
+
+	.location {
+		display: block;
+		padding-left: 25px;
+		letter-spacing: 1px;
+		color: $highlight;
+		background: url(../images/location-icon.png) no-repeat 3px center;
+		background-size: 15px 20px;
+		font-weight: 700;
+		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&#intro {
@@ -290,6 +310,8 @@ section {
 } // .row
 
 .event {
+	float: left;
+
 	&:nth-child(2n+1) {
 		clear: both;
 	}
@@ -308,6 +330,7 @@ section {
 		color: $primary;
 		text-decoration: none;
 		border-radius: 3px;
+		cursor: pointer;
 	}
 }
 
