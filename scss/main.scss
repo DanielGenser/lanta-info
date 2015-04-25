@@ -1,0 +1,307 @@
+/*
+ * Incorporate normalize.css
+ */
+@import 'normalize';
+
+/*! _blank Theme starts here... */
+
+/*
+ * Colors
+ */
+
+$primary: #1b5279;
+$secondary: #1a98a6;
+$highlight: #ee7908;
+$light: #aadae4;
+$alternate: #f0f5e1;
+$background: white;
+$text: #16161d;
+
+/*
+ * Fonts
+ */
+
+$font: 'Open Sans', Helvetica, Arial, sans-serif;
+
+/*
+ * Beaking Points
+ */
+
+$break: 768px;
+$break2: 1060px;
+$maxwidth: 1060px;
+
+/*
+ * Useful mixins
+ */
+
+@mixin list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+@mixin clear-after {
+    &:after {
+        content: '';
+        clear: both;
+        display: block;
+    }
+}
+@mixin visually-hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/*
+ * Basics
+ */
+
+html {
+  box-sizing: border-box;
+  background-color: $background;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+    font-family: $font;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $text;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: $primary;
+    
+    &:hover, &:active {
+        color: $secondary;
+    }
+}
+
+/*
+ * And so it beginns...
+ */
+
+//.site-wrap {
+//    margin: 0 auto;
+//    padding: 0 1rem;
+//    max-width: $maxwidth;
+//
+//    @media only screen and (min-width: $break) {
+//        padding: 0 2rem;
+//    }
+//}
+
+.site-header {
+	padding: 2rem 2rem 0.5rem;
+	
+	@media only screen and (min-width: $break) {
+		padding: 2rem 2rem;
+	}
+	
+	.site-header-inner {
+		position: relative;
+		margin: 0 auto;
+		max-width: $maxwidth;
+	}
+}
+.logo {
+    img {
+        width: 160px;
+		height: auto;
+
+		@media only screen and (min-width: $break) {
+			width: 200px;			
+		}
+    }
+}
+.description {
+	margin-bottom: 1rem;
+	color: $light;
+
+	@media only screen and (min-width: $break) {
+		margin-bottom: 0;
+	}
+}
+
+.site-nav {
+	
+	@media only screen and (min-width: $break) {	
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin: -1em;
+	}
+    
+    ul {
+        @include list-reset;
+		clear: both;
+		font-size: 0.875em;
+		line-height: 1;
+    }
+	li {
+		margin: 0 0 1rem 0;
+		
+		@media only screen and (min-width: $break) {
+			display: inline-block;
+			margin: 0 0 0 3rem;			
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+
+section {
+	padding: 0 2rem;
+
+	.section-inner {
+		margin: 0 auto;
+		padding: 2.5rem 0;
+		max-width: $maxwidth;
+	}
+
+	h1 {
+		margin: 0 0 2rem 0;
+		font-size: 2.4em;
+		line-height: 1.2;
+		color: $secondary;
+		font-weight: 100;
+		text-align: center;
+	}
+
+	h2 {
+		margin: 0 0 1rem 0;
+		color: $primary;
+		font-size: 1.5em;
+		line-height: 1.4;
+		
+		small {
+			display: block;
+			font-size: 0.75em;
+			font-weight: 100;
+		}
+	}
+	
+	.date {
+		display: block;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+
+	&#intro {
+		padding: 8rem 1rem;
+		background: url(../images/intro-bg.jpg) no-repeat center bottom;
+		background-size: cover;
+		color: white;
+		text-align: center;
+		
+		h1 {
+			margin: 0 0 0.5rem 0;
+			font-size: 3em;
+			line-height: 1;
+			color: white;
+		}
+		p {
+			margin: 0;
+			font-size: 1.5em;
+		}
+	}
+	&#events {
+		background-color: $alternate;
+	}
+	&#activities {
+		background-color: $secondary;
+
+		h1 {
+			color: white;
+		}
+	}
+}
+
+/*
+ * The Grid
+ * Used by sidebars/content and also inside the content area!
+ */
+.row {
+    clear: both;
+	margin: 0 -1.5rem;
+    @include clear-after;
+
+    .column {
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+        @include clear-after;
+
+        @media only screen and (min-width: $break) {
+            float: left;
+            
+            &.col-25 {
+                width: 25%;
+            }
+            &.col-30 {
+                width: 30%;
+            }
+            &.col-33 {
+                width: 33.33333%;
+            }
+            &.col-50 {
+                width: 50%;
+            }
+            &.col-70 {
+                width: 70%;
+            }
+            &.col-75 {
+                width: 75%;
+            }
+            &.col-100 {
+                width: 100%;
+            }
+        }
+    }
+    .row {
+        margin: 0 -15px 30px -15px;
+        @include clear-after;
+    }
+} // .row
+
+.activity {
+	background-color: white;
+	border-radius: 3px;
+	
+	img {
+		margin: 0;
+		text-align: bottom;
+	}
+
+	h2 {
+		margin: 0 1rem;
+		padding: .5rem 0 0;
+	}
+	p {
+		margin: 0 1rem;
+		padding: 0 0 1rem 0;
+	}
+}
+
+.site-footer {
+	padding: 0 2rem;
+}
+.site-footer-inner {
+	margin: 0 auto;
+	max-width: $maxwidth;
+}
+
+.hidden {
+	display: none;
+}
