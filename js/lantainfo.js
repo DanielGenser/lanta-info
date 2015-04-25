@@ -2,8 +2,6 @@ $( document ).ready(function() {
 	$('a').smoothScroll();
     
     $( '.activity-inner' ).matchHeight();
-    
-
 
     $( '.activity-list' ).mixItUp({
             animation: {
@@ -17,9 +15,13 @@ $( document ).ready(function() {
         layout: {
             display: 'block'
         },
+        callbacks: {
+        	onMixEnd: function(state){
+                $.fn.matchHeight._update();
+        	}
+        },
         load: {
             filter: 'all'
-            // sort: 'order:asc'
         },
         selectors: {
             target: '.activity',
