@@ -202,20 +202,20 @@ section {
 	.date {
 		display: block;
 		margin-bottom: 0.5rem;
-		padding-left: 25px;
+		padding-left: 27px;
 		letter-spacing: 1px;
 		color: $secondary;
-		background: url(../images/date-icon.png) no-repeat left center;
+		background: url(../images/date-icon.png) no-repeat left 1px;
 		background-size: 20px 20px;
 		font-weight: 700;
 	}
 
 	.location {
 		display: block;
-		padding-left: 25px;
+		padding-left: 27px;
 		letter-spacing: 1px;
 		color: $highlight;
-		background: url(../images/location-icon.png) no-repeat 3px center;
+		background: url(../images/location-icon.png) no-repeat 2px center;
 		background-size: 15px 20px;
 		font-weight: 700;
 		text-decoration: none;
