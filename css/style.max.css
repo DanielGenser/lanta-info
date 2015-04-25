@@ -632,6 +632,9 @@ section#how-to-get-here {
   display: block;
 }
 
+.event {
+  float: left;
+}
 .event:nth-child(2n+1) {
   clear: both;
 }
