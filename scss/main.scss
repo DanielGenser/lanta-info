@@ -80,7 +80,7 @@ img {
     height: auto;
 }
 a {
-    color: $primary;
+    color: $highlight;
     
     &:hover, &:active {
         color: $secondary;
@@ -157,7 +157,12 @@ a {
 		}
 	}
 	a {
+		color: $secondary;
 		text-decoration: none;
+		
+		&:hover {
+			text-decoration: underline;
+		};
 	}
 }
 
@@ -394,8 +399,12 @@ section {
 .site-footer-inner {
 	margin: 0 auto;
 	max-width: $maxwidth;
+	color: #ccc;
 }
 
+.right {
+	text-align: right;
+}
 .hidden {
 	display: none;
 }

@@ -432,7 +432,7 @@ img {
 }
 
 a {
-  color: #1b5279;
+  color: #ee7908;
 }
 a:hover, a:active {
   color: #1a98a6;
@@ -501,7 +501,11 @@ a:hover, a:active {
   }
 }
 .site-nav a {
+  color: #1a98a6;
   text-decoration: none;
+}
+.site-nav a:hover {
+  text-decoration: underline;
 }
 
 section {
@@ -745,6 +749,11 @@ section#how-to-get-here {
 .site-footer-inner {
   margin: 0 auto;
   max-width: 1060px;
+  color: #ccc;
+}
+
+.right {
+  text-align: right;
 }
 
 .hidden {
