@@ -27,8 +27,8 @@ $font: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif;
  * Beaking Points
  */
 
+$smallbreak: 420px;
 $break: 768px;
-$break2: 1060px;
 $maxwidth: 1060px;
 
 /*
@@ -230,7 +230,7 @@ section {
 	}
 	
 	&#how-to-get-here {
-		padding: 0;
+		padding: 0 2rem;
 	}
 }
 
@@ -248,8 +248,17 @@ section {
         margin-bottom: 2rem;
         @include clear-after;
 
+        @media only screen and (min-width: $smallbreak) {
+			float: left;
+
+            &.col-25 {
+                width: 50%;
+            }
+            &.col-50, &.col-70 {
+                width: 100%;
+            }
+		}
         @media only screen and (min-width: $break) {
-            float: left;
             
             &.col-25 {
                 width: 25%;
@@ -280,7 +289,49 @@ section {
     }
 } // .row
 
+.event {
+	&:nth-child(2n+1) {
+		clear: both;
+	}
+}
+
+.activity-filter {
+	@include list-reset;
+	margin-bottom: 2.5rem;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		margin: 0 0.25rem 0.5rem;
+		padding: 0.25rem 0.75rem;
+		background-color: $light;
+		color: $primary;
+		text-decoration: none;
+		border-radius: 3px;
+	}
+}
+
+#activities {
+	@include clear-after;
+}
+#activities .activity {
+	display: none;
+}
+
 .activity {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+    @include clear-after;
+
+    @media only screen and (min-width: $smallbreak) {
+		float: left;
+		width: 50%;
+	}
+    @media only screen and (min-width: $break) {
+		width: 25%;
+	}
+}
+.activity-inner {
 	background-color: white;
 	border-radius: 3px;
 	
