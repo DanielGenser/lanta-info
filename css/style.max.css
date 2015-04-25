@@ -689,6 +689,10 @@ section#how-to-get-here {
   display: none;
 }
 
+.activity-list {
+  margin: 0 -1.5rem;
+}
+
 .activity {
   padding: 0 1.5rem;
   margin-bottom: 2rem;
@@ -717,11 +721,12 @@ section#how-to-get-here {
 .activity-inner img {
   margin: 0;
   text-align: bottom;
+  border-radius: 3px 3px 0 0;
 }
 .activity-inner h2 {
   margin: 0 1rem 0.5rem;
   padding: .5rem 0 0;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 .activity-inner p {
   margin: 0 1rem;
