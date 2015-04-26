@@ -442,11 +442,11 @@ a:hover, a:active {
  * And so it beginns...
  */
 .site-header {
-  padding: 2rem 2rem 0.5rem;
+  padding: 1.5rem 2rem 0.5rem;
 }
 @media only screen and (min-width: 768px) {
   .site-header {
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem;
   }
 }
 .site-header .site-header-inner {
@@ -455,6 +455,9 @@ a:hover, a:active {
   max-width: 1060px;
 }
 
+.logo {
+  line-height: 1;
+}
 .logo img {
   width: 160px;
   height: auto;
@@ -466,6 +469,7 @@ a:hover, a:active {
 }
 
 .description {
+  display: none;
   margin-bottom: 1rem;
   color: #aadae4;
 }
@@ -480,7 +484,7 @@ a:hover, a:active {
     position: absolute;
     top: 50%;
     right: 0;
-    margin: -1em;
+    margin: -0.5em;
   }
 }
 .site-nav ul {
@@ -561,16 +565,21 @@ section .location:hover {
 }
 section#intro {
   padding: 8rem 1rem;
-  background: url(../images/lanta-beach-bg.jpg) no-repeat center center;
+  background: url(../images/kolanta-sunset.jpg) no-repeat center bottom;
   background-size: cover;
   color: white;
   text-align: center;
 }
 section#intro h1 {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 1.5rem 0;
   font-size: 3em;
   line-height: 1;
   color: white;
+}
+section#intro img {
+  max-width: 100%;
+  width: 800px;
+  height: auto;
 }
 section#intro p {
   margin: 0;
