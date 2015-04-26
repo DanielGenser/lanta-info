@@ -459,23 +459,14 @@ a:hover, a:active {
   line-height: 1;
 }
 .logo img {
+  margin-bottom: 1rem;
   width: 160px;
   height: auto;
 }
 @media only screen and (min-width: 768px) {
   .logo img {
-    width: 200px;
-  }
-}
-
-.description {
-  display: none;
-  margin-bottom: 1rem;
-  color: #aadae4;
-}
-@media only screen and (min-width: 768px) {
-  .description {
     margin-bottom: 0;
+    width: 200px;
   }
 }
 
@@ -564,11 +555,16 @@ section .location:hover {
   text-decoration: underline;
 }
 section#intro {
-  padding: 8rem 1rem;
+  padding: 4rem 2rem;
   background: url(../images/kolanta-sunset.jpg) no-repeat center bottom;
   background-size: cover;
   color: white;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  section#intro {
+    padding: 8rem 1rem;
+  }
 }
 section#intro h1 {
   margin: 0 0 1.5rem 0;

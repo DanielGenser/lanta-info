@@ -118,22 +118,15 @@ a {
 	line-height: 1;
 
     img {
+		margin-bottom: 1rem;
         width: 160px;
 		height: auto;
 
 		@media only screen and (min-width: $break) {
+			margin-bottom: 0;
 			width: 200px;			
 		}
     }
-}
-.description {
-	display: none;
-	margin-bottom: 1rem;
-	color: $light;
-
-	@media only screen and (min-width: $break) {
-		margin-bottom: 0;
-	}
 }
 
 .site-nav {
@@ -229,11 +222,15 @@ section {
 	}
 
 	&#intro {
-		padding: 8rem 1rem;
+		padding: 4rem 2rem;
 		background: url(../images/kolanta-sunset.jpg) no-repeat center bottom;
 		background-size: cover;
 		color: white;
 		text-align: center;
+		
+		@media only screen and (min-width: $break) {
+			padding: 8rem 1rem;
+		}
 		
 		h1 {
 			margin: 0 0 1.5rem 0;
